@@ -27,12 +27,18 @@ def pdf_cmd(args: _Namespace) -> int:
             lines = content.splitlines()
             for line in lines:
                 # LOG.info(line)  # to print whole thing
+                if "Final Details for Order #" in line:
+                    LOG.info(line)
                 if "1 of: " in line:
                     LOG.info(line)
                 if "Condition: " in line:
-                    LOG.info(line)
+                    if "Grand" in line:
+                        print("no idea where this goes")  # skip it
+                    else:
+                        LOG.info(line)
+                        LOG.info("next item: ")
                 # if "tax" in line:
-                #  LOG.info(line)
+                # LOG.info(line) # could grab out tax prices.
 
     return 0
 
