@@ -1,0 +1,10 @@
+---
+author_info:
+  name: Amber Dahlberg
+  email: mmbrea@hotmail.com
+  username: mmbrea
+versions: ["3.8", "3.9", "3.10", "3.11"]
+
+systems:
+  - macos-latest
+  - windows-latest

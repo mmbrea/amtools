@@ -1,0 +1,10 @@
+---
+name: amtools
+version: "{{major}}.{{minor}}.{{patch}}"
+description: amber's tools
+entry: {{entry}}
+requirements:
+  - vcorelib
+dev_requirements:
+  - setuptools-wrapper
+  - types-setuptools
