@@ -5,6 +5,10 @@ description: amber's tools
 entry: {{entry}}
 requirements:
   - vcorelib
+  - pypdf
 dev_requirements:
   - setuptools-wrapper
   - types-setuptools
+commands:
+  - name: pdf
+    description: "Dissecting PDFs"

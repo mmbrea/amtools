@@ -2,7 +2,7 @@
     =====================================
     generator=datazen
     version=3.1.4
-    hash=cb558e496e42e8b0e9f206c1c9b3b095
+    hash=6b0f9b02df3fb65c066f54afd0083631
     =====================================
 -->
 
@@ -49,8 +49,9 @@ This package is tested on the following platforms:
 ```
 $ ./venv3.11/bin/amtools -h
 
+ArgumentParser(prog='amtools pdf', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
 usage: amtools [-h] [--version] [-v] [-q] [--curses] [--no-uvloop] [-C DIR]
-               {noop} ...
+               {pdf,noop} ...
 
 amber's tools
 
@@ -64,7 +65,8 @@ options:
   -C DIR, --dir DIR  execute from a specific directory
 
 commands:
-  {noop}             set of available commands
+  {pdf,noop}         set of available commands
+    pdf              Dissecting PDFs
     noop             command stub (does nothing)
 
 ```
