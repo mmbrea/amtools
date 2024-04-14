@@ -16,7 +16,7 @@ def test_pdf_basic():
     args = [
         PKG_NAME,
         "pdf",
-        str(resource("Amazon.com - Order 111-0005087-4084226.pdf")),
+        str(resource("Amazon.com - Order 111-0032994-5809062.pdf")),
     ]
     assert amtools_main(args) == 0
 

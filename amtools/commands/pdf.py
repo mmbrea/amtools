@@ -21,8 +21,18 @@ def pdf_cmd(args: _Namespace) -> int:
     for pdf in args.pdfs:
         parsed = PdfReader(pdf)
         for page in parsed.pages:
-            print(page.extract_text())
-            LOG.info(page.extract_text())
+            content = page.extract_text()
+            # LOG.info(content)
+            # LOG.info(content.split())
+            lines = content.splitlines()
+            for line in lines:
+                # LOG.info(line)  # to print whole thing
+                if "1 of: " in line:
+                    LOG.info(line)
+                if "Condition: " in line:
+                    LOG.info(line)
+                # if "tax" in line:
+                #  LOG.info(line)
 
     return 0
 
