@@ -2,7 +2,7 @@
     =====================================
     generator=datazen
     version=3.1.4
-    hash=6b0f9b02df3fb65c066f54afd0083631
+    hash=718c4babd597cb57dcd77377cf38958d
     =====================================
 -->
 
@@ -29,10 +29,8 @@
 
 This package is tested with the following Python minor versions:
 
-* [`python3.8`](https://docs.python.org/3.8/)
-* [`python3.9`](https://docs.python.org/3.9/)
-* [`python3.10`](https://docs.python.org/3.10/)
 * [`python3.11`](https://docs.python.org/3.11/)
+* [`python3.12`](https://docs.python.org/3.12/)
 
 ## Platform Support
 
@@ -47,9 +45,8 @@ This package is tested on the following platforms:
 # Command-line Options
 
 ```
-$ ./venv3.11/bin/amtools -h
+$ ./venv3.12/bin/amtools -h
 
-ArgumentParser(prog='amtools pdf', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
 usage: amtools [-h] [--version] [-v] [-q] [--curses] [--no-uvloop] [-C DIR]
                {pdf,noop} ...
 
