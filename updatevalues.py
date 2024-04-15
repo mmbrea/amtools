@@ -11,12 +11,15 @@ from googleapiclient.errors import HttpError
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = "1bk7CiP_N08nctKws9b4mpHXfRzNXdXTW7Yj8yDJo69s"
+SPREADSHEET_ID = "1bk7CiP_N08nctKws9b4mpHXfRzNXdXTW7Yj8yDJo69s"
 spreadsheetId = "1bk7CiP_N08nctKws9b4mpHXfRzNXdXTW7Yj8yDJo69s"
 
-SAMPLE_RANGE_NAME = "Sheet1!A1:E10"
+RANGE_NAME = "Sheet1!A1:E10"
 rangename = "Sheet1!A1:E10"
 GOOGLE_CLOUD_QUOTA_PROJECT = "1bk7CiP_N08nctKws9b4mpHXfRzNXdXTW7Yj8yDJo69s"
+
+API_KEY = "AIzaSyAw4SugumLxWdIr5BihtZS6GuqAhEpk1ho"
+key = API_KEY
 
 
 def main():
@@ -49,14 +52,10 @@ def main():
         sheet = service.spreadsheets()
         result = (
             sheet.values()
-            .get(spreadsheetId=SAMPLE_SPREADSHEET_ID, range=SAMPLE_RANGE_NAME)
+            .get(spreadsheetId=SPREADSHEET_ID, range=RANGE_NAME)
             .execute()
         )
         values = result.get("values", [])
-
-        if not values:
-            print("No data found.")
-            return
 
         print("your shit:")
         for row in values:
