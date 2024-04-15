@@ -6,9 +6,14 @@ entry: {{entry}}
 requirements:
   - vcorelib
   - pypdf
+  - google-api-python-client
+  - google-auth-httplib2
+  - google-auth-oauthlib
 dev_requirements:
   - setuptools-wrapper
   - types-setuptools
 commands:
   - name: pdf
     description: "Dissecting PDFs"
+  - name: sheets
+    description: "Interacting with Google Sheets"

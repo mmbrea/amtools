@@ -1,7 +1,7 @@
 # =====================================
 # generator=datazen
 # version=3.1.4
-# hash=5e43a2766030a9bdc627bb963f62d72f
+# hash=de631bc43b999bfd6958510f26d3200e
 # =====================================
 
 """
@@ -17,6 +17,7 @@ from vcorelib.args import CommandRegister as _CommandRegister
 
 # internal
 from amtools.commands.pdf import add_pdf_cmd
+from amtools.commands.sheets import add_sheets_cmd
 
 
 def commands() -> _List[_Tuple[str, str, _CommandRegister]]:
@@ -27,6 +28,11 @@ def commands() -> _List[_Tuple[str, str, _CommandRegister]]:
             "pdf",
             "Dissecting PDFs",
             add_pdf_cmd,
+        ),
+        (
+            "sheets",
+            "Interacting with Google Sheets",
+            add_sheets_cmd,
         ),
         ("noop", "command stub (does nothing)", lambda _: lambda _: 0),
     ]

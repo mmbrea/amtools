@@ -2,7 +2,7 @@
     =====================================
     generator=datazen
     version=3.1.4
-    hash=718c4babd597cb57dcd77377cf38958d
+    hash=dd122a71071f67dc8e80f21d99be20b2
     =====================================
 -->
 
@@ -48,7 +48,7 @@ This package is tested on the following platforms:
 $ ./venv3.12/bin/amtools -h
 
 usage: amtools [-h] [--version] [-v] [-q] [--curses] [--no-uvloop] [-C DIR]
-               {pdf,noop} ...
+               {pdf,sheets,noop} ...
 
 amber's tools
 
@@ -62,8 +62,9 @@ options:
   -C DIR, --dir DIR  execute from a specific directory
 
 commands:
-  {pdf,noop}         set of available commands
+  {pdf,sheets,noop}  set of available commands
     pdf              Dissecting PDFs
+    sheets           Interacting with Google Sheets
     noop             command stub (does nothing)
 
 ```
